@@ -1,0 +1,8 @@
+{
+    "name": "Obhliadka",
+    "provider": "tfo",
+    "description": "Obhliadka",
+    "version": "1.0.0",
+    "useShellSDK": true,
+    "icon": "https://raw.githubusercontent.com/Anodius-FSM/FSM-Extensions/refs/heads/main/nastroje-partner/icon.svg"
+}

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FSM Extension</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <p id="info"></p>
+    <p id="error"></p>
+
+    <div class="general_content">
+        <div class="col1">
+            <div><button type="button">Uložiť</button></div>
+            <div class="stav-div">
+                <div><p>Stav obhliadky</p></div>
+                <div class="stav">
+                    <p id="stav">PREBIEHA</p>
+                </div> 
+            </div>
+            <div class="card">
+                <header>
+                    <p class="header">Zákazník</p>
+                </header>
+                <div class="content">
+                    <p id="meno_partnera"></p>
+                    <p><span id="ulica"></span><span id="cislo_domu"></span></p>
+                    <p><span id="psc"></span><span id="mesto"></span></p>
+                    <p>Dátum vystavenia: <span id="datum_vytvorenia"></span></p>
+                </div>
+            </div>
+
+            <div class="card">
+                <header>
+                    <p class="header">Záujem o sluzby</p>
+                </header>
+                <div class="content">
+                    <p><label for="sluzba_internet">Internet</label><input type="checkbox" name="" id="sluzba_internet"></p>
+                    <p><label for="sluzba_internettv">Internetová TV</label><input type="checkbox" name="" id="sluzba_internettv"></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col2">
+            <div class="card">
+                <header>
+                    <p class="header">Výstup kontrolóra</p>
+                </header>
+                <div class="content">
+                    <label for="bod_final">Finálny prístup. bod</label>
+                    <select name="" id="bod_final">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                    </select>
+                    <p>Maximálna rýchlosť <span id="max_rychlost">sss</span></p>
+                </div>
+            </div>
+
+            <div class="card">
+                <header>
+                    <p class="header">Dáta z obhliadky</p>
+                </header>
+                <div class="content">
+                    <p>Technik <span id="technik"></span></p>
+                    <p>Záujem o montáž <span id="install_technik"></span></p>
+                    <p>Prístupový bod <span id="bod"></span></p>
+                    <label for="uspesna">Úspešnosť </label> <!-- <span id="uspesna"></span> -->
+                    <select name="" id="uspesna">
+                        <option value="uspesna">uspesna</option>
+                        <option value="neuspesna">neuspesna</option>
+                    </select>
+                    <p>Dôvod neúspechu <span id="dovod_neuspech"></span></p>
+                    <p>Náročnosť(1-5) <span id="narocnost"></span></p>
+                    <p>Počet technikov <span id="pocet_technikov"></span></p>
+                    <p>Potrebný čas v hod. <span id="cas_install"></span></p>
+                    <p>Typ rebríka <span id="rebrik"></span></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col3">
+            <div class="card">
+                <header>
+                    <p class="header">Poznámka kontrolóra</p>
+                </header>
+                <div class="content">
+                    <textarea id="poznamka_kontrolora" cols="30" rows="5"></textarea>
+                </div>
+            </div>
+
+            <div class="card">
+                <header>
+                    <p class="header">Poznámka technika</p>
+                </header>
+                <div class="content">
+                    <textarea id="poznamka_technika" cols="30" rows="5"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="col4"> 
+            <div class="card">
+                <header>
+                    <p class="header">Zariadenie a materiály</p>
+                </header>
+                <div class="content">
+                    <p>typ model/ine</p>
+                    <p>typ model/ine</p>
+                    <p>typ model/ine</p>
+                    <p>typ model/ine</p>
+                    <p>typ model/ine</p>
+
+                    <p>typ model/ine</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="devices">
+
+    </div>
+    <div class="sken">
+        <h3>Skeny</h3>
+        <table id="sken_table">
+            <thead>
+                <tr>
+                    <th>Bod</th>
+                    <th>Kapacita bodu (Mbit)</th>
+                    <th>SSID</th>
+                    <th>Frekvencia</th>
+                    <th>Vzdialenosť(m)</th>
+                    <th>Výsledok merania</th>
+                    <th>Dátum</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+    </div>
+    <div id="fotky">
+        <h3>Fotky</h3>
+        <p>Súradnice: Lorem ipsum dolor sit amet...</p>
+        <div class="photos">
+
+            <!-- placeholder photos, refactor to dynamic -->
+            <img src="https://compote.slate.com/images/3ef6de7f-7114-4fe3-874f-bd898864af9e.jpeg" id="myImg1"
+                alt="Gojira-1" style="width:128px;height:128px;">
+            <img src="https://compote.slate.com/images/3ef6de7f-7114-4fe3-874f-bd898864af9e.jpeg" id="myImg2"
+                alt="Gojira-2" style="width:128px;height:128px;">
+            <img src="https://compote.slate.com/images/3ef6de7f-7114-4fe3-874f-bd898864af9e.jpeg" id="myImg3"
+                alt="Gojira-3" style="width:128px;height:128px;">
+            <img src="https://compote.slate.com/images/3ef6de7f-7114-4fe3-874f-bd898864af9e.jpeg" id="myImg4"
+                alt="Gojira-4" style="width:128px;height:128px;">
+            <div id="myModal" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="img01">
+                <div id="caption"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="fsm-shell.js"></script>
+    <script src="utils.js"></script>
+    <script src="common.js"></script>
+    <script src="my_extension.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
